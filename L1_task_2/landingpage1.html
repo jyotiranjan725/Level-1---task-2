@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #fdfdfd;
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: linear-gradient(90deg, #1d2b64, #f8cdda);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .navbar a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #fff;
+      left: 0;
+      bottom: -4px;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #f8cdda, #1d2b64);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #f8cdda, #1d2b64);
+  color: white;
+  text-align: center;
+}
+
+
+    .hero .btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background: white;
+      color: #1d2b64;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 600;
+    }
+
+    .hero .btn:hover {
+      background: #f8cdda;
+      color: white;
+    }
+
+    /* Section Container */
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #1d2b64;
+    }
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      flex: 1 1 300px;
+      max-width: 350px;
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .box h3 {
+      color: #1d2b64;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1d2b64;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #f8cdda;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        padding: 10px 25px;
+      }
+
+      .box {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">ProLanding</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="home">
+    <div>
+      <h1>Build Your Presence Professionally</h1>
+      <p>Elegant. Responsive. Effective. Design your brand with impact.</p>
+      <button class="btn">Get Started</button>
+    </div>
+  </header>
+
+  <section class="section" id="features">
+    <h2>Features</h2>
+    <div class="boxes">
+      <div class="box">
+        <h3>Responsive Design</h3>
+        <p>Perfectly adapts to all screen sizes for a flawless user experience.</p>
+      </div>
+      <div class="box">
+        <h3>Modern Aesthetic</h3>
+        <p>Clean and elegant visuals that leave a lasting impression.</p>
+      </div>
+      <div class="box">
+        <h3>Customizable</h3>
+        <p>Fully adjustable layout and color palette to match your brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="boxes">
+      <div class="box">
+        <h3>Web Development</h3>
+        <p>Professional web development with the latest technologies.</p>
+      </div>
+      <div class="box">
+        <h3>UI/UX Design</h3>
+        <p>Crafting interfaces that are beautiful, easy, and intuitive to use.</p>
+      </div>
+      <div class="box">
+        <h3>SEO Optimization</h3>
+        <p>Increase visibility with effective search engine optimization.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p style="text-align:center;">Email: support@prolanding.com | Phone: +91-1234567890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ProLanding. All rights reserved.</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>
